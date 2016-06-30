@@ -1,0 +1,10 @@
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\SeleniumEntryPoint.exe.config
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\obj\Debug\SeleniumEntryPoint.csprojResolveAssemblyReference.cache
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\SeleniumEntryPoint.exe
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\SeleniumEntryPoint.pdb
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\WebDriver.dll
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\WebDriver.Support.dll
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\WebDriver.xml
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\bin\Debug\WebDriver.Support.xml
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\obj\Debug\SeleniumEntryPoint.exe
+C:\Users\simon\Desktop\SeleniumEntryPoint\SeleniumEntryPoint\obj\Debug\SeleniumEntryPoint.pdb
