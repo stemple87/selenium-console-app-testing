@@ -9,36 +9,44 @@ class EntryPoint
     {
         string url = "http://testing.todvachev.com/selectors/css-path/";
         string cssPath = "#post-108 > div > figure > img";
-        string xPath = "//*[@id=\"post-108\"]/div/figure/img";
+        string xPath = "//*[@id=\"poost-108\"]/div/figure/img";
 
         IWebDriver driver = new ChromeDriver();
 
         driver.Navigate().GoToUrl(url);
 
-        IWebElement cssElement = driver.FindElement(By.CssSelector(cssPath));
-        IWebElement xPathElement = driver.FindElement(By.XPath(xPath));
+        IWebElement cssElement;
+        IWebElement xPathElement;
 
-        if (cssElement.Displayed)
+        try
         {
-            
-            GreenMessage("Yes, I can see the CSS element");
+            cssElement = driver.FindElement(By.CssSelector(cssPath));
+            if (cssElement.Displayed)
+            {
+
+                GreenMessage("Yes, I can see the CSS element");
+            }
         }
-        else
+        catch (NoSuchElementException)
+        {
+                RedMessage("Something went wrong");
+        }
+        try
+        {
+            xPathElement = driver.FindElement(By.XPath(xPath));
+            if (xPathElement.Displayed)
+            {
+
+                GreenMessage("Yes, I can see the xPath element");
+            }
+        }
+        catch (NoSuchElementException)
         {
             RedMessage("Something went wrong");
-        }
-        if (xPathElement.Displayed)
-        {
 
-            GreenMessage("Yes, I can see the xPath element");
-        }
-        else
-        {
-            RedMessage("Something went wrong");
         }
         driver.Quit();
     }
-
     private static void RedMessage(string message)
     {
         Console.ForegroundColor = ConsoleColor.Red;
@@ -46,7 +54,6 @@ class EntryPoint
         Console.ForegroundColor = ConsoleColor.White;
 
     }
-
     private static void GreenMessage(string message)
     {
         Console.ForegroundColor = ConsoleColor.Green;
