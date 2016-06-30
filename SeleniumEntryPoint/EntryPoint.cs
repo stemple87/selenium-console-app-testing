@@ -7,18 +7,20 @@ class EntryPoint
 {
     static void Main()
     {
-        string url = "http://testing.todorvachev.com/selectors/id";
-        string ID = "testImage";
+        string url = "http://testing.todorvachev.com/selectors/class-name";
+        string className = "testClass";
 
         IWebDriver driver = new ChromeDriver();
 
         driver.Navigate().GoToUrl(url);
 
-        IWebElement element = driver.FindElement(By.Id(ID));
+        IWebElement element = driver.FindElement(By.ClassName(className));
 
         if (element.Displayed)
         {
+            
             GreenMessage("Yes, I can see the element. It's right there!!!");
+            GreenMessage(element.Text);
         }
         else
         {
