@@ -7,20 +7,30 @@ class EntryPoint
 {
     static void Main()
     {
-        string url = "http://testing.todorvachev.com/selectors/class-name";
-        string className = "testClass";
+        string url = "http://testing.todvachev.com/selectors/css-path/";
+        string cssPath = "#post-108 > div > figure > img";
+        string xPath = "//*[@id=\"post-108\"]/div/figure/img";
 
         IWebDriver driver = new ChromeDriver();
 
         driver.Navigate().GoToUrl(url);
 
-        IWebElement element = driver.FindElement(By.ClassName(className));
+        IWebElement cssElement = driver.FindElement(By.CssSelector(cssPath));
+        IWebElement xPathElement = driver.FindElement(By.XPath(xPath));
 
-        if (element.Displayed)
+        if (cssElement.Displayed)
         {
             
-            GreenMessage("Yes, I can see the element. It's right there!!!");
-            GreenMessage(element.Text);
+            GreenMessage("Yes, I can see the CSS element");
+        }
+        else
+        {
+            RedMessage("Something went wrong");
+        }
+        if (xPathElement.Displayed)
+        {
+
+            GreenMessage("Yes, I can see the xPath element");
         }
         else
         {
